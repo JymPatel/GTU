@@ -2,3 +2,4 @@
 06 - converttemp
 07 - distance
 10 - maxof3
+11 - determinetype
