@@ -11,4 +11,5 @@ int main()
 	scanf("%f", &a);
 	float distance = u * t + 0.5 * a * t * t;
 	printf("distance travelled is  %f\n", distance);
+	return 0;
 }

@@ -22,4 +22,5 @@ int main()
 	{
 		printf("special character\n");
 	}
+	return 0;
 }

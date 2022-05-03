@@ -7,4 +7,5 @@ int main()
 	scanf("%f", &C);
 	F = 1.8 * C + 32;
 	printf("it's same as %f fahrenheit\n", F);
+	return 0;
 }

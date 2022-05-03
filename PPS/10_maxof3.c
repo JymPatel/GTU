@@ -24,4 +24,5 @@ int main()
 		printf("%i is greatest number", c);
 	}
 	printf("\n");
+	return 0;
 }
