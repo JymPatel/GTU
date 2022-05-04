@@ -10,4 +10,5 @@ int main(){
         n -= 1;
     }
     printf("n! is equal to %i\n", factorial);
+    return 0;
 }
