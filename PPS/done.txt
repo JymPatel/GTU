@@ -4,3 +4,4 @@
 10 - maxof3
 11 - determinetype
 16 - lasteven
+17 - factorial
