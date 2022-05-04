@@ -14,4 +14,5 @@ int main()
     float nt = gross - pf;
     // print
     printf("BASIC: %i\nDA   : %.*f\nHRA  : %.*f\nMA   : %.*f\nPROFIT %.*f\nGROSS: %.*f\nNET  : %.*f\n", basic, da, 3, hra, 3, ma, 3, pf, 3, gross, 3, nt, 3);
+    return 0;
 }
