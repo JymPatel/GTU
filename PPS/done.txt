@@ -5,6 +5,7 @@
 11 - determinetype
 12 - grades
 13 - payslip
+14 - 7days
 16 - lasteven
 17 - factorial
 18 - reverse
