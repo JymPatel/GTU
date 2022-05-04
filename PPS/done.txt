@@ -3,6 +3,7 @@
 07 - distance
 10 - maxof3
 11 - determinetype
+12 - grades
 16 - lasteven
 17 - factorial
 18 - reverse
