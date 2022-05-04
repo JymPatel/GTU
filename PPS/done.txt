@@ -5,3 +5,4 @@
 11 - determinetype
 16 - lasteven
 17 - factorial
+18 - reverse
