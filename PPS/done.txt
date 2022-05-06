@@ -1,4 +1,5 @@
 00 - hello
+01 - simplecalc
 06 - converttemp
 07 - distance
 09 - result
