@@ -13,3 +13,5 @@
 16 - lasteven
 17 - factorial
 18 - reverse
+20 - sumoffl
+24 - isprime
