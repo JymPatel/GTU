@@ -1,2 +1,5 @@
 a.out
 *.bcup
+.main.bcup
+*.AppImage
+.buttercup.AppImage
