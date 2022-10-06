@@ -51,38 +51,59 @@ int display(struct Stack *s){
         printf("stack empty!\n");
         return 1;
     }
+    
+    for (int i = 0; i <= s->top; i++){
+        printf("%d ", s->array[i]);
+    }
 
-    printf("%d\n", s->array[(*s).top]);
+    printf("\n");
     return 0;
 }
 
 int main(){
     struct Stack myStack;
-    myStack.top = 0;
-    myStack.array[0] = 5;
-    display(&myStack);
-    pop(&myStack);
-    display(&myStack);
-    push(&myStack, 8);
-    display(&myStack);
-    pop(&myStack);
-    display(&myStack);
-
-    pop(&myStack);
-    display(&myStack);
-    pop(&myStack);
-    display(&myStack);
-
-    for (int i = 0; i < 95; i++){
-        push(&myStack, i);
+    myStack.top = -1;
+    printf("empty stack created!\n\n");
+    
+    printf("tasks I can do: \n");
+    printf("1  push\n");
+    printf("2  pop\n");
+    printf("3  display\n");
+    printf("0  exit\n\n");
+    
+    int input;
+    while (0 == 0){
+        printf("what would you like to do? ");
+        scanf("%d", &input);
+        switch(input){
+            case 0:
+            return 0;
+            break;
+            
+            case 1:
+            printf("enter number to push: ");
+            int pushint;
+            scanf("%d", &pushint);
+            push(&myStack, pushint);
+            printf("%d pushed sucessfully\n", pushint);
+            break;
+            
+            case 2:
+            printf("popping element\n");
+            int popint;
+            popint = pop(&myStack);
+            printf("%d popped from stack", popint);
+            break;
+            
+            case 3:
+            display(&myStack);
+            break;
+            
+            default:
+            printf("enter number from 0-3\n");
+        }
+        printf("\n");
     }
-    for (int i = 0; i < 10; i++){
-        push(&myStack, i);
-        display(&myStack);
-    }
-    printf("%d\n", peek(&myStack));
-    printf("%d\n", peek(&myStack));
-    printf("%d\n", peek(&myStack));
 
     return 0;
 }
