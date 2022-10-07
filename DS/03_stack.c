@@ -30,13 +30,21 @@ int push(struct Stack *s, int element){
 }
 
 int change(struct Stack *s, int index, int element){
-    if (s->top < index || index < 0){
+    if ((s->top) + 1 < index || index <= 0){
         printf("no element at that index\n");
         return 1;
     }
     
-    s->array[index] = element;
+    s->array[s->top - index + 1] = element;
     return 0;
+}
+
+int peep(struct Stack *s, int peepindex){
+    if ((s->top) + 1 < peepindex){
+        printf("only %d elements in stack, can't peep!\n", (s->top) + 1);
+        return -1;
+    }
+    return s->array[(s->top) - peepindex + 1];
 }
 
 int peek(struct Stack *s){
@@ -72,6 +80,7 @@ int main(){
     printf("3  display\n");
     printf("4  change\n");
     printf("5  peek\n");
+    printf("6  peep\n");
     printf("0  exit\n\n");
     
     int input;
@@ -95,7 +104,7 @@ int main(){
             printf("popping element\n");
             int popint;
             popint = pop(&myStack);
-            printf("%d popped from stack", popint);
+            printf("%d popped from stack\n", popint);
             break;
             
             case 3:
@@ -126,11 +135,23 @@ int main(){
             break;
             
             case 5:
-            printf("peek to stack is: %d", peek(&myStack));
+            printf("peek to stack is: %d\n", peek(&myStack));
+            break;
+            
+            case 6:
+            printf("enter the place to check value: ");
+            int peepplace;
+            scanf("%d", &peepplace);
+            int peepelement = peep(&myStack, peepplace);
+            if (peepelement == -1){
+                printf("can't peep!\n");
+                break;
+            }
+            printf("peep element is %d\n", peepelement);
             break;
             
             default:
-            printf("enter number from 0-5\n");
+            printf("enter number from 0-6\n");
         }
         printf("\n");
     }
