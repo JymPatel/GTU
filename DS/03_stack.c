@@ -41,6 +41,7 @@ int change(struct Stack *s, int index, int element){
 
 int peek(struct Stack *s){
     if (s->top < 0){
+        printf("stack empty!\n");
         return -1;
     }
     return s->array[(*s).top];
@@ -69,6 +70,8 @@ int main(){
     printf("1  push\n");
     printf("2  pop\n");
     printf("3  display\n");
+    printf("4  change\n");
+    printf("5  peek\n");
     printf("0  exit\n\n");
     
     int input;
@@ -99,8 +102,35 @@ int main(){
             display(&myStack);
             break;
             
+            case 4:
+            printf("current stack ...\n");
+            if (display(&myStack) != 0){
+                break;
+            }
+               
+            int newElement;
+            int indexToChange;
+            
+            printf("enter element place to change: ");
+            scanf("%d", &indexToChange);
+            
+            printf("enter new number: ");
+            scanf("%d", &newElement);
+            
+            if (change(&myStack, indexToChange, newElement) != 0){
+                printf("index not yet used!\n");
+                break;
+            }
+            
+            printf("element changed sucessfully!\n");
+            break;
+            
+            case 5:
+            printf("peek to stack is: %d", peek(&myStack));
+            break;
+            
             default:
-            printf("enter number from 0-3\n");
+            printf("enter number from 0-5\n");
         }
         printf("\n");
     }
