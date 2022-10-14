@@ -47,7 +47,7 @@ int peep(struct Stack *s, int peepindex){
     return s->array[(s->top) - peepindex + 1];
 }
 
-int peek(struct Stack *s){
+int peak(struct Stack *s){
     if (s->top < 0){
         printf("stack empty!\n");
         return -1;
@@ -79,7 +79,7 @@ int main(){
     printf("2  pop\n");
     printf("3  display\n");
     printf("4  change\n");
-    printf("5  peek\n");
+    printf("5  peak\n");
     printf("6  peep\n");
     printf("0  exit\n\n");
     
@@ -135,7 +135,7 @@ int main(){
             break;
             
             case 5:
-            printf("peek to stack is: %d\n", peek(&myStack));
+            printf("peak to stack is: %d\n", peak(&myStack));
             break;
             
             case 6:
