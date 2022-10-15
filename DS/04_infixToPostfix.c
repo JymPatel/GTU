@@ -1,26 +1,28 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "04_stack.h"
 
 int main(){
+    // get stacks
     struct Stack operators;
     operators.top = -1;
     struct Stack operands;
     operands.top = -1;
 
-    char string[100];
-    printf("enter infix equation: ");
-
     for (int i = 0; i < 100; i++){
         operands.array[i] = '\0';
         operators.array[i] = '\0';
-        string[i] = '\0';
     }
 
-    scanf("%s", string);
 
+    printf("enter infix equation: ");
 
-    for (int i = 0; i < 100; i++){
-        int c = string[i];
+    while (true){
+
+        int c = getchar();
+        if (c == '\0' || c == '\12'){
+            break;
+        }
 
 
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')){
