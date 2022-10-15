@@ -59,7 +59,7 @@ int main(){
             }
 
             else{
-                while (peak(&operators) != '*' && peak(&operators) != '/' && peak(&operators) != '\0' && peak(&operators) != '+' && peak(&operators) != '-'){
+                while (peak(&operators) == '^'){
                     push(&operands, pop(&operators));
                 }
                 push(&operators, c);
