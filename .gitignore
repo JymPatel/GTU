@@ -3,3 +3,8 @@ a.out
 .main.bcup
 *.AppImage
 .buttercup.AppImage
+
+DS/.vscode/*
+PPS/.vscode/*
+DBMS/.vscode/*
+.vscode/*
