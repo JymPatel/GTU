@@ -36,9 +36,9 @@ int change(struct Stack *s, int index, int element){
     return 0;
 }
 
-int peep(struct Stack *s, int peepindex){
+char peep(struct Stack *s, int peepindex){
     if ((s->top) + 1 < peepindex){
-        return -1;
+        return '\0';
     }
     return s->array[(s->top) - peepindex + 1];
 }
