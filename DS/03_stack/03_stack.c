@@ -84,7 +84,7 @@ int main(){
     printf("0  exit\n\n");
     
     int input;
-    while (0 == 0){
+    while(1) {
         printf("what would you like to do? ");
         scanf("%d", &input);
         switch(input){
