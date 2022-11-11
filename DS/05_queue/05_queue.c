@@ -3,7 +3,7 @@
 
 struct Queue {
 	int last;
-	int array[5];
+	int array[100];
 };
 
 int enqueue(struct Queue *q, int insertElement) {
@@ -42,7 +42,7 @@ int main(){
 	// initiate queue
 	struct Queue queue;
 	queue.last = -1;
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 100; i++) {
 		queue.array[i] = '\0';
 	}
 

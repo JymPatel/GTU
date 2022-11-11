@@ -7,5 +7,8 @@ struct Queue {
 };
 
 int main() {
+    struct Queue queue;
+    queue.first = -1;
+    queue.last = -1;
     return 0;
 }
