@@ -1,5 +1,5 @@
 ## solution to problems listed by GTU
-here is all my lab work for college!!  
+here is all my lab work of college!!  
 
 ### what this repo contains
 completed (i mean,i am not working now)  
