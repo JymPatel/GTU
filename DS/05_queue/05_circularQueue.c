@@ -26,13 +26,14 @@ int dequeue(struct Queue *q, int *removedElement) {
     }
 	*removedElement = q->array[q->first];
 	q->array[q->first] = '\0';
-	(q->first)++;
 
     if(q->first == q->last){
         q->last = -1;
         q->first = 0;
+        return 0;
     }
 
+	(q->first)++;
 	return 0;
 
 }
