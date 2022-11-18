@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "04_stack.h"
+#include "stack.h"
 
 int main(){
     // get stacks
