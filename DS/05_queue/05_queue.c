@@ -2,6 +2,7 @@
 
 
 struct Queue {
+	int first;
 	int last;
 	int array[100];
 };
@@ -13,25 +14,27 @@ int enqueue(struct Queue *q, int insertElement) {
 
 	q->array[(q->last) + 1] = insertElement;
 	(q->last)++;
+	
 	return 0;
 }
 
 int dequeue(struct Queue *q, int *removedElement) {
-	if(q->last != -1) {
-		*removedElement = q->array[q->last];
-		q->array[q->last] = '\0';
-		(q->last)--;
+	if(q->first <= q->last) {
+		*removedElement = q->array[q->first];
+		q->array[q->first] = '\0';
+		(q->first)++;
 		return 0;
 	}
 	return 1;
 }
 
 int display(struct Queue *q) {
-	if(q->last == -1) {
-		printf("empty!!\n");
-		return 0;
-	}
-	for(int i = 0; i <= (q->last); i++) {
+    if(q->first > q->last) {
+        printf("empty!!\n");
+        return 1;
+    }
+
+	for(int i = q->first; i <= (q->last); i++) {
 		printf("%d ", q->array[i]);
 	}
 	printf("\n");
@@ -42,6 +45,7 @@ int main(){
 	// initiate queue
 	struct Queue queue;
 	queue.last = -1;
+    queue.first = 0;
 	for (int i = 0; i < 100; i++) {
 		queue.array[i] = '\0';
 	}
