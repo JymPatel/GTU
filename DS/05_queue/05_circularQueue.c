@@ -30,8 +30,9 @@ int dequeue(struct Queue *q, int *removedElement) {
 
     if(q->first == q->last){
         q->last = -1;
+        q->first = 0;
     }
-    
+
 	return 0;
 
 }
