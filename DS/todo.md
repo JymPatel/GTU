@@ -1,0 +1,16 @@
+- [x] 01 pointers  
+- [x] 02 memory
+- [x] 03 stack
+- [x] 04 infix to postfix
+- [x] 05 queue
+- [ ] 06 singly linked list
+- [ ] 07 stack using linked list
+- [ ] 08 queue using linked list
+- [ ] 09 doubly linked list
+- [ ] 10 circular linked list
+- [ ] 11 binary search tree
+- [ ] 12
+- [ ] 13
+- [ ] 14
+- [ ] 15
+- [ ] 16
