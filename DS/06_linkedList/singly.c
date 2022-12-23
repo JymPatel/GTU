@@ -7,23 +7,35 @@ struct Node {
     struct Node *next;
 };
 
-struct Node *createNode() {
+struct Node *createNode(int nodeValue) {
     struct Node *node = malloc(sizeof(struct Node));
+    node->value = nodeValue;
+    return node;
+}
+
+struct Node *getLastNode(struct Node *node) {
+    while(node->next != NULL) {
+        node = node->next;
+    }
+
     return node;
 }
 
 struct Node *insertNode(struct Node *head, int position, int insertValue) {
     if (head == NULL){
-        head = createNode();
-        head->value = insertValue;
+        head = createNode(insertValue);
         head->next = NULL;
     }
     else if (position == 0) {
-        struct Node *newNode = createNode();
+        struct Node *newNode = createNode(insertValue);
         newNode->next = head;
-        newNode->value = insertValue;
         head = newNode;
     }
+    else if (position == -1) {
+        struct Node *lastNode = getLastNode(head);
+        lastNode->next = createNode(insertValue);
+    }
+
     return head;
 }
 
@@ -49,7 +61,7 @@ int main() {
     printf("tasks I can do: \n");
     printf("1  insert at front\n");
     printf("2  insert at end\n");
-    printf("3  todo\n");
+    printf("3  insert node in way linked list is in ascending order\n");
     printf("4  remove first node\n");
     printf("5  remove node before position specified\n");
     printf("6  remove node after position specified\n");
@@ -57,6 +69,7 @@ int main() {
     printf("0  exit\n");
 
     int input;
+    int insertValue;
     while(true) {
         printf("\n");
 		printf("what would you like to do? ");
@@ -68,14 +81,19 @@ int main() {
 
             case 1:
             printf("enter value to insert: ");
-            int insertValue;
             scanf("%d", &insertValue);
             head = insertNode(head, 0, insertValue);
             break;
 
+            case 2:
+            printf("enter value to insert: ");
+            scanf("%d", &insertValue);
+            head = insertNode(head, -1, insertValue);
+            break;
+
             case 7:
             displayLinkedList(head);
-            printf('\n');
+            printf("\n");
             break;
         
             default:
