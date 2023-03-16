@@ -129,3 +129,48 @@ ssasit@ssasit-Veriton-Series:~/210760107022/OS$ rmdir -p assignments/some/screen
 ssasit@ssasit-Veriton-Series:~/210760107022/OS$ ls
 hello(2).txt  hello(3).txt  hello.txt  screenshots  untitled.doc
 
+
+
+ssasit@ssasit-Veriton-Series:~$ cd 2107*/OS
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ ls
+commands.sh  hello(2).txt  hello(3).txt  hello.txt  screenshots  untitled.doc
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc -l hello.txt
+1 hello.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc hello.txt
+ 1  2 14 hello.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc ../readme.md
+ 10  87 626 ../readme.md
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc -L ../readme.md
+364 ../readme.md
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc -c ../readme.md
+626 ../readme.md
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc -w ../readme.md
+87 ../readme.md
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ wc -l ../readme.md
+10 ../readme.md
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ link hello.txt null.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ ls
+commands.sh   hello(3).txt  null.txt     untitled.doc
+hello(2).txt  hello.txt     screenshots
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat null.txt
+hello, world!
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ echo "good morning!" >> hello.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat null.txthello, world!
+good morning!
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ rm hello.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat null.txt
+hello, world!
+good morning!
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat hello.txt
+cat: hello.txt: No such file or directory
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat > hello.txt
+hello, world!
+^C
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat null.txt
+hello, world!
+good morning!
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ echo "good evening!" >> hello.txt
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ cat null.txthello, world!
+good morning!
+ssasit@ssasit-Veriton-Series:~/210760107022/OS$ 
+
