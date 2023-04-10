@@ -12,6 +12,6 @@ DBMS/.vscode/*
 
 
 # java
-.class
+*.class
 
 private/*
