@@ -33,20 +33,5 @@ class Main {
         catch (Exception e) {
             System.out.println(e);
         }
-
-
-
-
-    //     char[] array = new char[1000];
-    //      // Creates a reader using the FileReader
-    //   FileReader input = new FileReader("input.txt");
-
-    //   // Reads characters
-    //   input.read(array);
-    //   System.out.println("Data in the file:");
-    //   System.out.println(array);
-
-    //   // Closes the reader
-    //   input.close();
     }
 }
