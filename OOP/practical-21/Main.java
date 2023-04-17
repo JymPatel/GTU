@@ -1,6 +1,4 @@
 import java.io.*;
-import java.math.MathContext;
-import java.util.*;
 import static java.lang.Math.*;
 
 class Main {
