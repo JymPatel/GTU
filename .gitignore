@@ -10,3 +10,5 @@ DBMS/.vscode/*
 .vscode/*
 
 private/*
+
+.idea
