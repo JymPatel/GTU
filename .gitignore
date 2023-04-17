@@ -7,11 +7,6 @@ a.out
 DS/.vscode/*
 PPS/.vscode/*
 DBMS/.vscode/*
-.vscode/
-.idea
-
-
-# java
-*.class
+.vscode/*
 
 private/*
