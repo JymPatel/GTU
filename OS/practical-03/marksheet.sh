@@ -21,7 +21,7 @@ echo -e "you scored total of" $BLUE_COLOR$total$DEFAULT "and averaged" $BLUE_COL
 if (($sub1 > 100 || $sub2 > 100 || $sub3 > 100))
 then
     echo -e "${RED}you entered wrong marks!${DEFAULT}"
-fi
+fii 
 
 
 if (($sub1 < 35 || $sub2 < 35 || $sub3 < 35))
