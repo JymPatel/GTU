@@ -1,10 +1,20 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
+        // take filename from CLI
+        String filepath = "";
+        if (args.length > 0) {
+            filepath = args[0];
+        }
+        System.out.println("using file " + filepath);
+
         // get file
-        File file = new File("words.txt");
+        File file = new File(filepath);
 
         // check if file exists
         if (!file.exists()) {
@@ -12,25 +22,38 @@ public class Main {
             return;
         }
 
-
-        // read file in arr
-        char[] arr = new char[1000];
-
+        // read file using scanner
+        ArrayList<String> arr=new ArrayList<String>();
         try {
-            FileReader readFile = new FileReader("words.txt");
-            readFile.read(arr);
-            readFile.close();
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNext()) {
+                String nextWord = scanner.next();
+                boolean addWord = true;
+                for (String word: arr) {
+                    if (word == null) break;
+                    else if (word.equals(nextWord)) {
+                        addWord = false;
+                        break;
+                    }
+
+                }
+                if (addWord) arr.add(nextWord);
+            }
+            scanner.close();
         }
         catch (Exception e) {
             System.out.println(e);
         }
 
-        // get all words
-        
-        // sort all words
+
+        // sort words
+        Collections.sort(arr, Collections.reverseOrder());
+
 
         // print all words
-
-        System.out.println(arr);
+        for (String word: arr){
+            if (word != null)
+            System.out.println(word);
+        }
     }
 }
