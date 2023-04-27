@@ -1,4 +1,4 @@
-from termcolor import cprint, colored 0
+# from termcolor import cprint, colored
 
 class TicTacToe:
     def __init__(self, player1, player2):
@@ -19,7 +19,7 @@ class TicTacToe:
             elif i != 0:
                 string += '┆'
             
-            string += f' {self.arr[i]} '
+            string += ' ' + str(self.arr[i]) + ' '
         return string
     
     
@@ -39,7 +39,20 @@ class TicTacToe:
             
             
     def check_win(self):
-        pass
+        wins = [[0, 1, 2], [3,4,5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [6, 4, 2]]
+        for player in [self.player1, self.player2]:
+            for win in wins:
+                for index in win:
+                    if self.arr[index] == player.char:
+                        continue
+                    break
+                else:
+                    return player
+            else:
+                break
+        else:
+            return None
+        
 
 
 class Player:
@@ -49,6 +62,10 @@ class Player:
         self.char = char
 
 
+    def __str__(self) -> str:
+        return self.name + ' has score ' + str(self.score)
+
+
 class Games:
     def __init__(self, players, games_to_play=[]):
         self.played = []
@@ -56,20 +73,41 @@ class Games:
         self.players = players
         
     def create_games(self):
-        pass
+        for player in self.players:
+            for other_player in self.players:
+                if player != other_player:
+                    self.to_play.append(TicTacToe(player, other_player))
+
+    def add_player(player):
+        self.players.append(player)
 
 
+def Main():
+    inpt = int(input("number of players: "))
+    game = Games([])
+    for i in range(inpt):
+        name = input('name: ')
+        char = input('character: ')
+        player = Player(name, char)
 player1 = Player('jayam', 'X')
 player2 = Player('pratham', 'O')
-tictactoe = TicTacToe(player1, player2)
-# tictactoe.play(1)
-# tictactoe.play(3)
-tictactoe.check_win()
-print(tictactoe)
+player3 = Player('ravi', 'R')
 
+game = Games([player1, player3, player2])
+game.create_games()
 
-new_tictac = TicTacToe(player2, player1)
-for i in range(9):
-    new_tictac.play(int(input("enter number: ")))
-    print(new_tictac)
-    
+for g in game.to_play:
+    for i in range(9):
+        print(g)
+        print(g.player1.name)
+        print(g.player2.name)
+        try:
+            g.play(int(input("number: ")))
+        except ValueError:
+            continue
+        if (g.check_win()):
+            print('winner is:', g.check_win().name)
+            g.check_win().score += 1
+            continue
+
+print(player1, player2, player3)
