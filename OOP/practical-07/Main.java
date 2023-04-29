@@ -1,4 +1,4 @@
-import java.util.*;
+import java.lang.Math;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Main {
             plateNumber += c;
         }
         for (int i = 0; i < 4; i++){
-            int c = Math.random();
+            int c = (int)(Math.random());
             plateNumber += c;
         }
         System.out.println("your plate number is: " + plateNumber);
