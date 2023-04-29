@@ -7,6 +7,8 @@ here is all my lab work of college!!
 - [x] PPS - 3110003 (basics of C language)  
 - [ ] DS - 3130702 (data structures and algorithms using C)  
 - [ ] DBMS - (basic sql queries)
+- [ ] [OOP](./object-oriented-programming) - (object oriented programming using Java)
+- [ ] [OS](./operating-systems) - (basic shell-scripts)
 
 ## remember
 
