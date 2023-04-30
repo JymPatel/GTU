@@ -8,6 +8,11 @@ class TicTacToe:
         self.currentTurn = player1
         self.winner = None
         self.moves = []
+        self.moves_remaining = {
+            player1.char: 5,
+            player2.char: 4
+        }
+        self.win_moves = []
 
 
     def __str__(self) -> str:
@@ -19,7 +24,7 @@ class TicTacToe:
             elif i != 0:
                 string += '┆'
             
-            string += ' ' + str(self.arr[i]) + ' '
+            string += f' {self.arr[i]} '
         return string
     
     
@@ -28,6 +33,7 @@ class TicTacToe:
             raise ValueError('incorrect move!')   
         self.arr[place - 1] = self.currentTurn.char
         self.moves.append(place - 1)
+        self.moves_remaining[self.currentTurn.char] -= 1
         self.change_turn()
             
             
@@ -37,8 +43,16 @@ class TicTacToe:
         else:
             self.currentTurn = self.player1
             
+    
+    def remaining_moves(self) -> str:
+        string = 'moves remaining::\n'
+        for char in self.moves_remaining:
+            string += f"{char}: {self.moves_remaining[char]}\n"
+        return string
             
     def check_win(self):
+        if (self.winner):
+            return self.winner
         wins = [[0, 1, 2], [3,4,5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [6, 4, 2]]
         for player in [self.player1, self.player2]:
             for win in wins:
@@ -47,12 +61,9 @@ class TicTacToe:
                         continue
                     break
                 else:
+                    self.winner = player
+                    self.win_moves = win
                     return player
-            else:
-                break
-        else:
-            return None
-        
 
 
 class Player:
@@ -63,7 +74,7 @@ class Player:
 
 
     def __str__(self) -> str:
-        return self.name + ' has score ' + str(self.score)
+        return f'{self.name} ({self.char}) has score {self.score}'
 
 
 class Games:
@@ -78,8 +89,12 @@ class Games:
                 if player != other_player:
                     self.to_play.append(TicTacToe(player, other_player))
 
-    def add_player(player):
+    def add_player(self, player):
         self.players.append(player)
+
+    def display_scores(self):
+        for player in self.players:
+            print(player)
 
 
 def Main():
@@ -93,12 +108,13 @@ player1 = Player('jayam', 'X')
 player2 = Player('pratham', 'O')
 player3 = Player('ravi', 'R')
 
-game = Games([player1, player3, player2])
+game = Games([player1, player3])
 game.create_games()
 
 for g in game.to_play:
     for i in range(9):
         print(g)
+        print(g.remaining_moves())
         print(g.player1.name)
         print(g.player2.name)
         try:
@@ -106,8 +122,9 @@ for g in game.to_play:
         except ValueError:
             continue
         if (g.check_win()):
-            print('winner is:', g.check_win().name)
+            print(g.check_win().name, 'won!')
             g.check_win().score += 1
-            continue
+            break
 
 print(player1, player2, player3)
+print(game.display_scores())
