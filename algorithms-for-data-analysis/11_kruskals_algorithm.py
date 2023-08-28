@@ -20,11 +20,14 @@ sorted_edges = sorted(edges, key=lambda x: x[2])
 
 nodes_in_tree = set([])
 tree_edges = []
+cost = 0
 
 for edge in sorted_edges:
     if edge[0] not in nodes_in_tree or edge[1] not in nodes_in_tree:
         nodes_in_tree.add(edge[0])
         nodes_in_tree.add(edge[1])
+        cost += edge[2]
         tree_edges.append(edge)
 
 print(f"Final edges: {tree_edges}")
+print(f"Cost: {cost}")

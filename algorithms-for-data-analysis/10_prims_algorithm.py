@@ -17,6 +17,7 @@ print(f"Initial graph: \n{graph}")
 
 connected_nodes = set([0])
 disconnected_nodes = set(range(1, len(graph)))
+cost = 0
 
 prims_graph = [[float('inf')] * len(graph[0]) for _ in range(len(graph))]
 for i in range(len(prims_graph)):
@@ -33,7 +34,9 @@ while disconnected_nodes:
                     min_edge_weight = graph[node][i]
     prims_graph[min_edge[0]][min_edge[1]] = min_edge_weight
     prims_graph[min_edge[1]][min_edge[0]] = min_edge_weight
+    cost += min_edge_weight
     connected_nodes.add(min_edge[1])
     disconnected_nodes.remove(min_edge[1])
 
 print(f"Final graph: \n{prims_graph}")
+print(f"Cost: {cost}")
