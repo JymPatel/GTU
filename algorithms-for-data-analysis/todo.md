@@ -8,7 +8,7 @@
     - [ ] e. quick sort
 - [ ] 2.
 - [ ] 3.
-- [ ] 4.
+- [x] 4. Time Analysis b/w iterative and recursive functions.
 - [ ] 5.
 - [ ] 6.
 - [ ] 7.
