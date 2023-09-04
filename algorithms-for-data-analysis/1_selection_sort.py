@@ -1,3 +1,5 @@
+import time, random
+
 def selection_sort(arr):
     for i in range(len(arr)):
         min_idx = i
@@ -8,7 +10,10 @@ def selection_sort(arr):
         print(f'Pass {i+1}: {arr}')
     return arr
 
-arr = [2,5,1,3,4,7,6,8,9,0]
+
+arr = [random.randint(-100, 100) for _ in range(1000)]
 print(f'Initial array: {arr}\n')
 
+t1 = time.time()
 selection_sort(arr)
+print(f"Time taken: {time.time() - t1} seconds")

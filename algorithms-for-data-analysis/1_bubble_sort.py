@@ -1,3 +1,5 @@
+import time, random
+
 def bubble_sort(arr):
     flag = False
     for i in range(len(arr)):
@@ -11,7 +13,9 @@ def bubble_sort(arr):
         print(f'Pass {i+1}: {arr}')
     return arr
 
-arr = [2,0,5,1,3,4,7,6,8,9]
+arr = [random.randint(-100, 100) for _ in range(1000)]
 print(f'Initial array: {arr}\n')
 
+t1 = time.time()
 bubble_sort(arr)
+print(f"Time taken: {time.time() - t1} seconds")

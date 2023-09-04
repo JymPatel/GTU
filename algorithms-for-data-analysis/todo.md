@@ -1,6 +1,11 @@
 # algorithms for data analysis
 
 - [ ] 1. sorting algorithms
+    - [x] a. bubble sort
+    - [x] b. selection sort
+    - [x] c. insertion sort
+    - [x] d. merge sort
+    - [ ] e. quick sort
 - [ ] 2.
 - [ ] 3.
 - [ ] 4.
