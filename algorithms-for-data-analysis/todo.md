@@ -12,7 +12,7 @@
 - [ ] 5.
 - [ ] 6.
 - [ ] 7.
-- [ ] 8.
+- [x] 8. Knapsack (Greedy Approach)
 - [ ] 9.
 - [x] 10. Prim's Algorithm
 - [x] 11. Kruskal's Algorithm
