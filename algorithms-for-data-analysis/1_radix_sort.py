@@ -15,11 +15,9 @@ def radix_sort(arr, key):
     new_arr = []
     print(f"Key: {key}")
     for i in range(10):
-        print(i, arr)
         for element in arr:
-            if ((element % key) / key) * 10 == i:
+            if ((element % key) // (key / 10)) == i:
                 new_arr.append(element)
-                print(element)
     
     print(new_arr)
     return new_arr
