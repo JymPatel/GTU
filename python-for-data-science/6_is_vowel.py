@@ -2,7 +2,7 @@ char1 = 'A'
 char2 = 'b'
 
 def alph_type(c):
-    if c.lower() in ['a', 'i', 'o', 'u']:
+    if c.lower() in ['a', 'e', 'i', 'o', 'u']:
         return 'vowel'
     return 'consonant'
 
