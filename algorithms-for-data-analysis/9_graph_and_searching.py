@@ -12,12 +12,12 @@ def dfs(graph_arr):
     dfs_graph = [[0 for i in range(no_nodes)] for j in range(no_nodes)]
 
     to_visit = [initial_node]
-    to_visit2 = [initial_node]
+    to_visit_parent = [initial_node]
     visited = []
 
     while to_visit:
         curr = to_visit.pop()
-        parent = to_visit2.pop()
+        parent = to_visit_parent.pop()
 
         if curr in visited:
             continue
@@ -28,9 +28,9 @@ def dfs(graph_arr):
             if not graph_arr[curr][i] or i in visited or i == curr:
                 continue
             to_visit.append(i)
-            to_visit2.append(curr)
+            to_visit_parent.append(curr)
             # print(to_visit, visited, ":)")
-            # print(to_visit2, ":)")
+            # print(to_visit_parent, ":)")
         visited.append(curr)
         # print(f"{curr}: {to_visit}")
     print()
@@ -46,12 +46,12 @@ def bfs(graph_arr):
     bfs_graph = [[0 for i in range(no_nodes)] for j in range(no_nodes)]
 
     to_visit = [initial_node]
-    to_visit2 = [initial_node]
+    to_visit_parent = [initial_node]
     visited = []
 
     while to_visit:
         curr = to_visit.pop(0)
-        parent = to_visit2.pop(0)
+        parent = to_visit_parent.pop(0)
 
         if curr in visited:
             continue
@@ -62,9 +62,9 @@ def bfs(graph_arr):
             if not graph_arr[curr][i] or i in visited or i == curr or i in to_visit:
                 continue
             to_visit.append(i)
-            to_visit2.append(curr)
+            to_visit_parent.append(curr)
             # print(to_visit, visited, ":)")
-            # print(to_visit2, ":)")
+            # print(to_visit_parent, ":)")
         visited.append(curr)
         print(f"{curr}: {to_visit}")
 

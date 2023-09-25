@@ -19,7 +19,9 @@ n = int(input("n? "))
 recursive_time = time.time()
 factorial = recursive_factorial(n)
 print(f"Recursive: {time.time() - recursive_time}")
+print(factorial)
 
 iterative_time = time.time()
 factorial = iterative_factorial(n)
 print(f"Iterative: {time.time() - iterative_time}")
+

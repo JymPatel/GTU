@@ -9,11 +9,11 @@
 - [ ] 2.
 - [ ] 3.
 - [x] 4. Time Analysis b/w iterative and recursive functions.
-- [ ] 5.
+- [x] 5. Knapsack 01 (Dynamic Approach)
 - [ ] 6.
 - [ ] 7.
 - [x] 8. Knapsack (Greedy Approach)
-- [ ] 9.
+- [x] 9. Graph and Searching (BFS, DFS)
 - [x] 10. Prim's Algorithm
 - [x] 11. Kruskal's Algorithm
 - [ ] 12.
