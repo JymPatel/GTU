@@ -1,0 +1,4 @@
+Hello world!!
+Zen of python
+Now is better than never
+Errors should never pass silently
