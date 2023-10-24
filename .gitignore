@@ -4,10 +4,7 @@ a.out
 *.AppImage
 .buttercup.AppImage
 
-DS/.vscode/*
-PPS/.vscode/*
-DBMS/.vscode/*
-.vscode/*
+**/.vscode
 
 private/*
 
@@ -15,3 +12,4 @@ private/*
 *.iml
 
 .venv
+.ipynb_checkpoint*
