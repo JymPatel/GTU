@@ -1,0 +1,14 @@
+((*- extends 'article.tplx' -*))
+
+% Remove page numbers
+((* block page_number -*))
+((* endblock page_number *))
+
+% Remove header
+((* block page_header -*))
+((* endblock page_header *))
+
+% Define custom geometry (margins)
+((* block margins *))
+\geometry{tmargin=1in, bmargin=1in, lmargin=1in, rmargin=1in}
+((* endblock margins *))

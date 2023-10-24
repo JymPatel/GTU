@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <book id="bk001">
+        <author>Gambardella, Matthew</author>
+        <title>XML Developer's Guide</title>
+        <price>44.95</price>
+    </book>
+    <book id="bk002">
+        <author>Ralls, Kim</author>
+        <title>Midnight Rain</title>
+        <price>5.95</price>
+    </book>
+    <book id="bk003">
+        <author>Corets, Eva</author>
+        <title>Maeve Ascendant</title>
+        <price>5.95</price>
+    </book>
+    <book id="bk004">
+        <author>Rowling, J.K.</author>
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <price>12.99</price>
+    </book>
+    <book id="bk005">
+        <author>Tolkien, J.R.R.</author>
+        <title>The Fellowship of the Ring</title>
+        <price>14.99</price>
+    </book>
+    <book id="bk006">
+        <author>Orwell, George</author>
+        <title>1984</title>
+        <price>9.95</price>
+    </book>
+</catalog>
