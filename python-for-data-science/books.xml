@@ -1,33 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <catalog>
-    <book id="bk001">
-        <author>Gambardella, Matthew</author>
-        <title>XML Developer's Guide</title>
-        <price>44.95</price>
-    </book>
-    <book id="bk002">
-        <author>Ralls, Kim</author>
-        <title>Midnight Rain</title>
-        <price>5.95</price>
-    </book>
-    <book id="bk003">
-        <author>Corets, Eva</author>
-        <title>Maeve Ascendant</title>
-        <price>5.95</price>
-    </book>
-    <book id="bk004">
-        <author>Rowling, J.K.</author>
-        <title>Harry Potter and the Philosopher's Stone</title>
-        <price>12.99</price>
-    </book>
-    <book id="bk005">
-        <author>Tolkien, J.R.R.</author>
-        <title>The Fellowship of the Ring</title>
-        <price>14.99</price>
-    </book>
-    <book id="bk006">
-        <author>Orwell, George</author>
-        <title>1984</title>
-        <price>9.95</price>
-    </book>
+   <book id="bk201">
+      <author>Smith, John</author>
+      <title>The Art of Programming</title>
+      <genre>Computer</genre>
+      <price>29.99</price>
+      <publish_date>2023-05-15</publish_date>
+      <description>An essential guide to programming techniques.</description>
+   </book>
+   <book id="bk202">
+      <author>Johnson, Mary</author>
+      <title>Into the Wild</title>
+      <genre>Adventure</genre>
+      <price>12.99</price>
+      <publish_date>2023-08-20</publish_date>
+      <description>An adventurous journey through the wilderness.</description>
+   </book>
+   <book id="bk203">
+      <author>Roberts, David</author>
+      <title>The Enigma Code</title>
+      <genre>Thriller</genre>
+      <price>14.95</price>
+      <publish_date>2023-06-10</publish_date>
+      <description>A thrilling story of espionage and code-breaking.</description>
+   </book>
+   <book id="bk204">
+      <author>Lee, Sarah</author>
+      <title>Love in the City</title>
+      <genre>Romance</genre>
+      <price>9.99</price>
+      <publish_date>2023-02-14</publish_date>
+      <description>A heartwarming tale of love in a bustling metropolis.</description>
+   </book>
+   <book id="bk205">
+      <author>Baker, Michael</author>
+      <title>Space Odyssey</title>
+      <genre>Science Fiction</genre>
+      <price>19.99</price>
+      <publish_date>2023-10-30</publish_date>
+      <description>A space adventure beyond the stars.</description>
+   </book>
+   <book id="bk206">
+      <author>Williams, Laura</author>
+      <title>Mystery Mansion</title>
+      <genre>Mystery</genre>
+      <price>11.99</price>
+      <publish_date>2023-04-18</publish_date>
+      <description>Uncover the secrets of a mysterious mansion.</description>
+   </book>
+   <book id="bk207">
+      <author>King, Stephen</author>
+      <title>The Haunting</title>
+      <genre>Horror</genre>
+      <price>13.99</price>
+      <publish_date>2023-10-28</publish_date>
+      <description>A terrifying tale of the supernatural.</description>
+   </book>
+   <book id="bk208">
+      <author>Chen, Mei</author>
+      <title>Recipes from Around the World</title>
+      <genre>Cookbook</genre>
+      <price>10.99</price>
+      <publish_date>2023-01-05</publish_date>
+      <description>Explore delicious recipes from different cultures.</description>
+   </book>
+   <book id="bk209">
+      <author>Wilson, James</author>
+      <title>History Uncovered</title>
+      <genre>History</genre>
+      <price>15.99</price>
+      <publish_date>2023-07-22</publish_date>
+      <description>Discover untold stories from the past.</description>
+   </book>
+   <book id="bk210">
+      <author>Anderson, Emily</author>
+      <title>Gardening for Beginners</title>
+      <genre>Gardening</genre>
+      <price>8.99</price>
+      <publish_date>2023-03-12</publish_date>
+      <description>A comprehensive guide to starting your garden.</description>
+   </book>
+   <!-- You can add more books by following the same pattern. -->
 </catalog>

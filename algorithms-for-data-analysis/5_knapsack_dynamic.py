@@ -1,3 +1,4 @@
+from pprint import pprint
 
 p = [10, 5, 15, 7, 6, 18, 3]
 w = [2, 3, 5, 7, 1, 4, 1]
@@ -23,3 +24,16 @@ def knapsack01(weight = max_weight, obj_no=len(w)):
 
 profit, objects = knapsack01()
 print(f"max profit of {profit} can be made using {objects}")
+for i in range(len(knap_arr[0])):
+    knapsack01(i)
+print(knap_arr)
+
+knap_arr2 = [[-1 for i in range(max_weight + 1)] for _ in range(len(w))]
+for i in range(len(knap_arr)):
+    for j in range(len(knap_arr[i])):
+        if knap_arr[i][j] == -1:
+            knap_arr2[i][j] = -1
+        else:
+            knap_arr2[i][j] = knap_arr[i][j][0]
+
+pprint(knap_arr2)
