@@ -27,9 +27,11 @@ def merge_sort(arr):
     return arr
 
 
-arr = [random.randint(-100, 100) for _ in range(1000)]
+arr = [5, 6, 7,1, 2, 8]
 print(f'Initial array: {arr}\n')
+merge_sort(arr)
 
+arr = [random.randint(-100, 100) for _ in range(1000)]
 t1 = time.time()
 merge_sort(arr)
 print(f"Time taken: {time.time() - t1} seconds")
