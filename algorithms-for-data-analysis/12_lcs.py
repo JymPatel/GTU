@@ -45,7 +45,7 @@ def longest_common_subsequence(str1, str2):
     return ''.join(reversed(lcs))
 
 # Example usage
-str1 = "AGGTAB"
-str2 = "GXTXAYB"
+str1 = "ssasit"
+str2 = "sas"
 result = longest_common_subsequence(str1, str2)
 print("Longest Common Subsequence:", result)
