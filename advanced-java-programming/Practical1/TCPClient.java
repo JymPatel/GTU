@@ -12,7 +12,7 @@ public class TCPClient {
         String message = "Hello, Server!";
         DataInputStream dataInputStream = new DataInputStream(System.in);
         try {
-            Socket socket = new Socket(InetAddress.getByName("192.168.3.208"), 8000);
+            Socket socket = new Socket(InetAddress.getByName("localhost"), 8000);
 
             OutputStream outputStream = socket.getOutputStream();
             PrintStream printStream = new PrintStream(outputStream);
