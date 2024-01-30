@@ -1,4 +1,4 @@
-package Practical1;
+package Practical01;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

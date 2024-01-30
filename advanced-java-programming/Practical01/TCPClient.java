@@ -1,4 +1,4 @@
-package Practical1;
+package Practical01;
 
 import java.io.DataInputStream;
 import java.io.IOException;

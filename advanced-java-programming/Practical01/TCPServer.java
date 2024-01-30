@@ -1,4 +1,4 @@
-package Practical1;
+package Practical01;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
