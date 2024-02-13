@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 06 Form</title>
+    <script>
+        function redirectToRelativePage() {
+            // You can perform any necessary form validation here before redirection
+            // For now, let's assume the validation is successful
+
+            const name = document.getElementById("name-1").value;
+            const city = document.getElementById("city-1").value;
+            // Redirect to a relative path (e.g., a page in the same directory)
+            window.location.href = 'welcome.jsp?' + 'name=' + name + "&city=" + city; // Replace with your desired relative path
+
+            return false; // Prevent the form from submitting in the traditional way
+        }
+    </script>
+</head>
+<body>
+    <form action="#" onsubmit="return redirectToRelativePage()">
+        <p>Login Form</p>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name-1">
+        <br>
+        <label for="city">City: </label>
+        <input type="text" name="city" id="city-1">
+
+        <br>
+        <input type="submit" name="submit" id="submit">
+    </form>
+</body>
+</html>
