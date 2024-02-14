@@ -6,15 +6,11 @@
     <title>Practical 06 Form</title>
     <script>
         function redirectToRelativePage() {
-            // You can perform any necessary form validation here before redirection
-            // For now, let's assume the validation is successful
-
             const name = document.getElementById("name-1").value;
             const city = document.getElementById("city-1").value;
-            // Redirect to a relative path (e.g., a page in the same directory)
-            window.location.href = 'welcome.jsp?' + 'name=' + name + "&city=" + city; // Replace with your desired relative path
-
-            return false; // Prevent the form from submitting in the traditional way
+            const enrolment = document.getElementById('enrolment').value;
+            window.location.href = `welcome.jsp?name=${name}&city=${city}&enroll=${enrolment}`;
+            return false
         }
     </script>
 </head>
@@ -24,10 +20,15 @@
         <label for="name">Name: </label>
         <input type="text" name="name" id="name-1">
         <br>
+
+        <label for="enrolment">Enrollment Number: </label>
+        <input type="number" name="enrolment" id="enrolment">
+        <br>
+
         <label for="city">City: </label>
         <input type="text" name="city" id="city-1">
-
         <br>
+
         <input type="submit" name="submit" id="submit">
     </form>
 </body>
