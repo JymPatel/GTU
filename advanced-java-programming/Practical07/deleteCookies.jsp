@@ -15,7 +15,7 @@
             response.addCookie(cookie);
             }
     %>
-    <h1>Deleted all Cookies!!</h1>
+    <h1>Deleted all</h1>
     <a href="readCookies.jsp">Read Cookies</a>
 </body>
 </html> 
