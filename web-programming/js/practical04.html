@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <script>
+        function changeColor(elementId, color) {
+            document.getElementById(elementId).style.color = color;
+        }
+
+        function setBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <h1>Color Picker</h1>
+
+    <label for="backgroundColorSelect">Select Background Color:</label>
+    <select id="backgroundColorSelect" onchange="setBackgroundColor(this.value)">
+        <option value="white">White</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+    </select>
+
+    <label for="textColorSelect">Select Text Color:</label>
+    <select id="textColorSelect" onchange="changeColor('content', this.value)">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <div id="content">
+        <p>This is some sample text. Changing the color using the dropdown above.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical 02</title>
+    <link href="practical02.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <form id="myForm" onsubmit="return validateForm()">
+      <label> Select Date: <input type="date" id="dateInput" /> </label>
+      <label> Email: <input type="email" id="emailInput" /> </label>
+      <label> Password: <input type="password" id="passwordInput" /> </label>
+      <label>
+        Radio:
+        <input type="radio" name="radioOption" id="radioOption1" /> Option 1
+        <input type="radio" name="radioOption" id="radioOption2" /> Option 2
+      </label>
+      <label>
+        <input type="checkbox" id="checkboxInput" /> Accept Terms and Conditions
+      </label>
+      <label> Reset: <input type="reset" /> (resets all input data) </label>
+      <label> Submit: <input type="submit" /> </label>
+      <label> File: <input type="file" id="fileInput" /> </label>
+    </form>
+
+    <script src="practical02.js"></script>
+  </body>
+</html>
