@@ -1,0 +1,21 @@
+8000
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+\viewkind4\uc1\pard\li195\cf1\f0\fs20 LDA 0003h
+\par MOV B A
+\par LDA 0001h
+\par SUB B
+\par STA 0005h
+\par LDA 0002h
+\par MOV B A
+\par LDA 0000h
+\par SBB B
+\par STA 0004h\cf0\fs20 
+\par }
+<End Codes>
+20
+<End UserData>
+20
+<End HexData>
+
+<End Comment>

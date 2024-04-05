@@ -1,0 +1,6 @@
+- [ ] 
+- [ ] Swapping with and without using 3rd variable
+- [x] DeMorgan's Law
+- [x] Addition and Substraction of 8-bit/16-bit
+- [ ] Multiplication and Division of 8-bit numbers
+- [ ] AND, OR, XOR and NOT of all operations
