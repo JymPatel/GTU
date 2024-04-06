@@ -7,8 +7,8 @@
     <style>
       #imageContainer {
         position: absolute;
-        top: 100px; /* Specify the desired position */
-        left: 100px; /* Specify the desired position */
+        top: 100px; 
+        left: 100px;
       }
     </style>
   </head>
@@ -22,29 +22,6 @@
     </div>
 
     <script>
-      // Array of image URLs
-      const imageUrls = [
-        "https://avatars.githubusercontent.com/u/93824505?v=4",
-        "https://avatars.githubusercontent.com/u/11620230?s=200&v=4",
-        "https://avatars.githubusercontent.com/u/102582123?v=4",
-      ]; // Add more image URLs if needed
-
-      let currentIndex = 0;
-      const imageElement = document.getElementById("image");
-
-      function changeImage() {
-        // Change the image source
-        imageElement.src = imageUrls[currentIndex];
-
-        // Increment the index for the next image
-        currentIndex = (currentIndex + 1) % imageUrls.length;
-
-        // Schedule the next image change after 1 millisecond
-        setTimeout(changeImage, 1);
-      }
-
-      // Start changing images
-      changeImage();
     </script>
   </body>
 </html>
