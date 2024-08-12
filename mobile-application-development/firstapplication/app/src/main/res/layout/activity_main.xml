@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Shree Swami Atmanand Saraswati Institute of Technology"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ssasitlogo" />
+
+    <EditText
+        android:id="@+id/txt_u_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Enter Name" />
+
+    <EditText
+        android:id="@+id/txt_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_u_name"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/chk_rem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_pass"
+        android:layout_marginTop="10dp"
+        android:text="Remember me" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chk_rem"
+        android:layout_marginTop="10dp"
+        android:text="Login" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="124dp"
+        android:text="210760107022" />
+</RelativeLayout>
